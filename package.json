@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-plugin-react-i18next",
+  "name": "gatsby-plugin-i18next-hmr",
   "version": "0.9.9",
   "description": "Easily translate your Gatsby website into multiple languages w/ HMR support 🔥",
   "main": "index.js",
@@ -87,7 +87,7 @@
     "translate"
   ],
   "repository": {
-    "url": "https://github.com/microapps/gatsby-plugin-react-i18next"
+    "url": "https://github.com/leonardoquevedox/gatsby-plugin-i18next-hmr"
   },
   "files": [
     "dist",
