@@ -1,5 +1,5 @@
-import React from 'react';
-import {I18NextContext} from './types';
+import React from 'react'
+import { I18NextContext } from './types'
 
 export const I18nextContext = React.createContext<I18NextContext>({
   language: 'en',
@@ -7,5 +7,5 @@ export const I18nextContext = React.createContext<I18NextContext>({
   routed: false,
   defaultLanguage: 'en',
   originalPath: '/',
-  path: '/'
-});
+  path: '/',
+})
