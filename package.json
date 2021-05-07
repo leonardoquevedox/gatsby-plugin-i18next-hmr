@@ -1,49 +1,24 @@
 {
   "name": "gatsby-plugin-react-i18next",
   "version": "0.0.27",
-  "description": "Easily translate your Gatsby website into multiple languages",
+  "description": "Easily translate your Gatsby website into multiple languages w/ HMR support 🔥",
   "main": "index.js",
   "types": "index.d.ts",
-  "author": "Dmitriy Nevzorov",
+  "author": "Leonardo Quevedo",
   "license": "MIT",
-  "keywords": [
-    "react",
-    "gatsby",
-    "gatsbyjs",
-    "gatsby-plugin",
-    "gatsby-component",
-    "i18next",
-    "react-i18next",
-    "gatsby-i18n",
-    "i18n",
-    "i18next",
-    "localization",
-    "localisation",
-    "translation",
-    "translate"
-  ],
-  "repository": {
-    "url": "https://github.com/microapps/gatsby-plugin-react-i18next"
-  },
-  "files": [
-    "dist",
-    "index.js",
-    "index.d.ts",
-    "gatsby-browser.js",
-    "gatsby-node.js",
-    "gatsby-ssr.js"
-  ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "scripts": {
     "build:ts": "babel src --out-dir dist --extensions .ts,.tsx",
     "build:defs": "tsc --declaration --outDir dist --emitDeclarationOnly",
     "dev": "babel -w src --out-dir dist --extensions .ts,.tsx",
-    "prepare": "NODE_ENV=production yarn run build:ts && yarn run build:defs",
+    "prepare": "cross-env NODE_ENV=production yarn run build:ts && yarn run build:defs",
     "format": "prettier --write '**/*.{js,jsx,json,ts,tsx,md}'",
     "release": "release-it"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "browser-lang": "^0.1.0",
+    "glob": "^7.1.6",
+    "path-to-regexp": "^6.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -51,6 +26,7 @@
     "@types/react": "^16.9.43",
     "@types/react-helmet": "^6.0.0",
     "babel-preset-gatsby-package": "^0.4.6",
+    "cross-env": "^7.0.3",
     "gatsby": "^2.24.8",
     "husky": "^4.2.5",
     "i18next": "^19.6.2",
@@ -61,12 +37,6 @@
     "react-i18next": "^11.7.0",
     "release-it": "^13.6.5",
     "typescript": "^3.9.7"
-  },
-  "dependencies": {
-    "bluebird": "^3.7.2",
-    "browser-lang": "^0.1.0",
-    "glob": "^7.1.6",
-    "path-to-regexp": "^6.1.0"
   },
   "peerDependencies": {
     "gatsby": "^2.2.0",
@@ -99,5 +69,36 @@
         "yarn run prepare"
       ]
     }
+  },
+  "keywords": [
+    "react",
+    "gatsby",
+    "gatsbyjs",
+    "gatsby-plugin",
+    "gatsby-component",
+    "i18next",
+    "react-i18next",
+    "gatsby-i18n",
+    "i18n",
+    "i18next",
+    "localization",
+    "localisation",
+    "translation",
+    "translate"
+  ],
+  "repository": {
+    "url": "https://github.com/microapps/gatsby-plugin-react-i18next"
+  },
+  "files": [
+    "dist",
+    "index.js",
+    "index.d.ts",
+    "gatsby-browser.js",
+    "gatsby-node.js",
+    "gatsby-ssr.js"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
